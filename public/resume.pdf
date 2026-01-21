@@ -1,0 +1,142 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+  /Font <<
+    /F1 5 0 R
+    /F2 6 0 R
+  >>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 1200
+>>
+stream
+BT
+/F2 28 Tf
+50 720 Td
+(DEBJIT CHANDRA SARKAR) Tj
+0 -35 Td
+/F1 14 Tf
+(Full Stack Developer | AI SaaS Builder) Tj
+0 -25 Td
+/F1 11 Tf
+(+91 6289771823 | hello@debjit.dev | India) Tj
+0 -40 Td
+/F2 16 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -20 Td
+/F1 10 Tf
+(Passionate Full Stack Developer specializing in AI-powered SaaS products and) Tj
+0 -15 Td
+(modern web applications. Expert in React, TypeScript, Tailwind CSS, and) Tj
+0 -15 Td
+(Supabase. Experienced in workflow automation and AI integrations.) Tj
+0 -35 Td
+/F2 16 Tf
+(TECHNICAL SKILLS) Tj
+0 -20 Td
+/F1 10 Tf
+(Frontend: React, TypeScript, Tailwind CSS, Vite, shadcn/ui, Framer Motion) Tj
+0 -15 Td
+(Backend: Supabase, REST APIs, Node.js, PostgreSQL, Edge Functions) Tj
+0 -15 Td
+(AI/Automation: OpenAI API, n8n, LangChain, Prompt Engineering) Tj
+0 -15 Td
+(Tools: Git, Vercel, Docker, Figma, VS Code) Tj
+0 -35 Td
+/F2 16 Tf
+(EXPERIENCE) Tj
+0 -20 Td
+/F1 11 Tf
+(Full Stack Developer - AI Startup \(Remote\)) Tj
+0 -15 Td
+/F1 10 Tf
+(January 2024 - Present) Tj
+0 -15 Td
+(- Architecting AI-powered web applications with React and TypeScript) Tj
+0 -15 Td
+(- Building RESTful APIs and integrating Supabase for authentication) Tj
+0 -15 Td
+(- Implementing workflow automation using n8n and custom integrations) Tj
+0 -25 Td
+/F1 11 Tf
+(Frontend Developer - Tech Agency \(India\)) Tj
+0 -15 Td
+/F1 10 Tf
+(June 2023 - December 2023) Tj
+0 -15 Td
+(- Built pixel-perfect responsive interfaces using React and Tailwind CSS) Tj
+0 -15 Td
+(- Optimized web performance achieving 95+ Lighthouse scores) Tj
+0 -25 Td
+/F1 11 Tf
+(Junior Developer - Freelance \(Remote\)) Tj
+0 -15 Td
+/F1 10 Tf
+(January 2022 - May 2023) Tj
+0 -15 Td
+(- Developed custom WordPress themes and React applications) Tj
+0 -15 Td
+(- Integrated payment gateways and third-party APIs) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000066 00000 n 
+0000000125 00000 n 
+0000000286 00000 n 
+0000001540 00000 n 
+0000001617 00000 n 
+
+trailer
+<<
+/Size 7
+/Root 1 0 R
+>>
+startxref
+1699
+%%EOF
