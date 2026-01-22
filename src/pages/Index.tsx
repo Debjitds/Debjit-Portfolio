@@ -7,10 +7,13 @@ import { ExperienceSection } from '@/components/ExperienceSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
+import { ScrollProgress } from '@/components/ScrollProgress';
+import { BackToTop } from '@/components/BackToTop';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ScrollProgress />
       <Navbar />
       <main>
         <HeroSection />
@@ -22,6 +25,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };

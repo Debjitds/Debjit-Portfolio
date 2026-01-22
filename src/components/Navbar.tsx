@@ -146,7 +146,17 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    const targetId = link.href.replace('#', '');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                      setTimeout(() => {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                      }, 300);
+                    }
+                  }}
                 >
                   {link.name}
                 </a>
