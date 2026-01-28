@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# Modern Developer Portfolio
 
-## Project info
+A high-performance, responsive, and customizable developer portfolio template built with the latest modern web technologies. This project is designed to showcase skills, projects, and professional experience with a clean code architecture and premium UI design.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Project Overview
 
-## How can I edit this code?
+This application serves as a comprehensive professional portfolio for software engineers and developers. It features interactive animations, a fully responsive layout, and an organized structure that makes it easy to customize and deploy.
 
-There are several ways of editing your application.
+### Key Use Cases
+- Personal Developer Portfolio
+- Resume / CV Website
+- Project Showcase
 
-**Use Lovable**
+## 🛠 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This project is engineered with a production-ready stack focusing on performance and type safety.
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Build Tool**: [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- **Framework**: [React](https://react.dev/) - The Library for Web and Native User Interfaces
+- **Language**: [TypeScript](https://www.typescriptlang.org/) - Strongly Typed JavaScript
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-First CSS Framework
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) - Reusable components built with Radix UI and Tailwind CSS
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) - Production-ready motion library for React
+- **Routing**: [React Router](https://reactrouter.com/) - Client-side routing
+- **State Management & Data**: [TanStack Query](https://tanstack.com/query/latest) - Asynchronous state management
+- **Form Handling**: [React Hook Form](https://react-hook-form.com/) with [Zod](https://zod.dev/) validation
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-**Use your preferred IDE**
+## 📂 Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+A high-level overview of the significant directories and files:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+├── src/
+│   ├── components/       # Reusable UI components and specific page sections
+│   │   ├── ui/           # Atomic UI components (buttons, inputs, cards)
+│   │   └── ...           # Feature sections (Hero, About, Projects)
+│   ├── pages/            # Main route views of the application
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and shared configuration
+│   ├── assets/           # Static assets (images, global styles)
+│   ├── App.tsx           # Main application component and routing configuration
+│   └── main.tsx          # Application entry point
+├── public/               # Static files served at root
+└── package.json          # Project dependencies and scripts
 ```
 
-**Edit a file directly in GitHub**
+## 💻 Local Development Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Follow these verified steps to get the project running locally.
 
-**Use GitHub Codespaces**
+### Prerequisites
+- [Node.js](https://nodejs.org/) (Version 18 or higher recommended)
+- npm, yarn, or bun
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1.  **Clone the repository**
+    ```bash
+    git clone <your-repo-url>
+    cd <your-project-directory>
+    ```
 
-This project is built with:
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3.  **Start Development Server**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:8080` (or similar port).
 
-## How can I deploy this project?
+4.  **Build for Production**
+    ```bash
+    npm run build
+    ```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## ✏️ Editing & Customization
 
-## Can I connect a custom domain to my Lovable project?
+### Modifying Content
+- **Sections**: Most content (text, project details) is located within specific components in `src/components`. For example, to edit the "About" section, modify `src/components/AboutSection.tsx`.
+- **Navigation**: Update the navigation links in `src/components/Navbar.tsx` and `src/components/Footer.tsx`.
 
-Yes, you can!
+### Styling
+- **Global Styles**: Defined in `src/index.css` and `src/App.css`.
+- **Theme Configuration**: Tailwind configuration is located in `tailwind.config.ts`. You can customize colors, fonts, and breakpoints here.
+- **Components**: UI components in `src/components/ui/` use Tailwind classes. You can modify them directly to change their appearance.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Routes
+- **Adding Pages**: Create new page components in `src/pages/` and register them in the React Router configuration within `src/App.tsx`.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🎨 UI & Feature Notes
+
+- **Responsive Design**: The application is fully responsive, leveraging Tailwind's breakpoint system.
+- **Animations**: Complex animations are handled via Framer Motion. Check `src/components/animations` or individual component files for animation logic.
+- **Theming**: The project utilizes CSS variables for theming, allowing for easy updates to the color scheme in `src/index.css`.
+
+## 🚀 Deployment
+
+The project is a standard static site and can be deployed easily to any modern hosting platform.
+
+### Vercel / Netlify / GitHub Pages
+1.  Connect your repository (GitHub/GitLab/Bitbucket).
+2.  Configure the build settings:
+    - **Build Command**: `npm run build`
+    - **Output Directory**: `dist`
+3.  Deploy.
+
+## 🛡 Best Practices & Maintenance
+
+- **Linting**: Run `npm run lint` to check for code quality issues and ESLint errors.
+- **Type Checking**: TypeScript is enforced. Ensure no type errors exist before building.
+- **Component Updates**: When updating primitive UI components (`src/components/ui`), ensure you review the props interface to maintain type safety.
