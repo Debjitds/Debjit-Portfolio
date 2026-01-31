@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@debjit.dev',
-    href: 'mailto:hello@debjit.dev',
+    value: 'debjitchsarkarofficial2003@gmail.com',
+    href: 'mailto:debjitchsarkarofficial2003@gmail.com',
   },
   {
     icon: MapPin,
@@ -29,9 +29,11 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/Debjitds', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/debjitchandrasarkar', label: 'LinkedIn' },
   { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: Instagram, href: 'https://www.instagram.com/debjit.sarkar.756?igsh=ZHFvcWVocHlieTdh', label: 'Instagram' },
+  { icon: Mail, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=debjitchsarkarofficial2003@gmail.com', label: 'Mail' },
 ];
 
 export const ContactSection = () => {
@@ -55,7 +57,7 @@ export const ContactSection = () => {
     <section id="contact" className="section-padding relative overflow-hidden bg-card/30">
       <div className="hero-glow bottom-0 left-1/2 -translate-x-1/2" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <ScrollReveal direction="up" delay={0}>
@@ -75,7 +77,7 @@ export const ContactSection = () => {
           </ScrollReveal>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
             <ScrollReveal direction="left" delay={0}>
@@ -91,14 +93,14 @@ export const ContactSection = () => {
                   <motion.a
                     href={info.href}
                     whileHover={{ scale: 1.02, x: 5 }}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 group overflow-hidden"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
                       <info.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm text-muted-foreground">{info.label}</p>
-                      <p className="font-semibold text-foreground">{info.value}</p>
+                      <p className="font-semibold text-foreground text-sm sm:text-base break-all">{info.value}</p>
                     </div>
                   </motion.a>
                 </StaggerItem>
@@ -108,22 +110,22 @@ export const ContactSection = () => {
             {/* Social Links */}
             <ScrollReveal direction="up" delay={0.3}>
               <p className="text-sm text-muted-foreground mb-4">Find me on</p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-3 md:gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.href.startsWith('mailto:') ? undefined : "_blank"}
+                    rel={social.href.startsWith('mailto:') ? undefined : "noopener noreferrer"}
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 + index * 0.1, type: 'spring' }}
                     whileHover={{ scale: 1.15, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:border-primary/50 hover:text-primary transition-all duration-300"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:border-primary/50 hover:text-primary transition-all duration-300"
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-4 h-4 md:w-5 md:h-5" />
                   </motion.a>
                 ))}
               </div>
@@ -134,7 +136,7 @@ export const ContactSection = () => {
           <ScrollReveal direction="right" delay={0.2}>
             <motion.form 
               onSubmit={handleSubmit} 
-              className="space-y-6 p-6 rounded-2xl bg-card border border-border/50"
+              className="space-y-4 md:space-y-6 p-4 md:p-6 rounded-2xl bg-card border border-border/50"
               whileHover={{ borderColor: 'hsl(var(--primary) / 0.3)' }}
               transition={{ duration: 0.3 }}
             >

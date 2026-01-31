@@ -5,12 +5,12 @@ import { ScrollReveal, StaggerReveal, StaggerItem } from './animations/ScrollRev
 
 const projects = [
   {
-    title: 'AI SaaS Dashboard',
-    description: 'A comprehensive AI-powered analytics platform with real-time data visualization, user authentication, and multi-tenant architecture. Built for scalability and performance.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    tech: ['React', 'TypeScript', 'Supabase', 'OpenAI', 'Tailwind CSS'],
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'tRIAL-cLIENTS',
+    description: 'A SaaS platform that helps developers and designers practice real-world project work through realistic, AI-generated client briefs. It simulates real client requirements, constraints, and ambiguity to build practical skills and stronger portfolios.',
+    image: '/tRIAL-cLIENTS.png',
+    tech: ['React', 'TypeScript', 'Supabase', 'Gemini', 'Tailwind CSS'],
+    liveUrl: 'https://trial-clients.vercel.app',
+    githubUrl: 'https://github.com/Debjitds/tRIAL-cLIENT',
     featured: true,
   },
   {
