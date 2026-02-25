@@ -23,12 +23,12 @@ const projects = [
     featured: true,
   },
   {
-    title: 'Smart Content Generator',
+    title: 'PreOp-CareCoordinator 🏥',
     description: 'AI-powered content generation tool for marketers. Features include blog writing, social media posts, and SEO optimization with multiple LLM integrations.',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop',
-    tech: ['React', 'LangChain', 'GPT-4', 'Vercel', 'Stripe'],
+    image: '/preop.png',
+    tech: ['Streamlit', 'LangChain', 'MedGemma', 'Python', 'PostgreSQL'],
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Debjitds/PreOp-CareCoordinator-by-Google-MEDGEMMA.git',
     featured: false,
   },
   {
@@ -84,9 +84,9 @@ export const ProjectsSection = () => {
                     transition={{ duration: 0.6 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                  
+
                   {/* Overlay Actions */}
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 flex items-center justify-center gap-4 bg-background/60 backdrop-blur-sm"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
