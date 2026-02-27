@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import ContactForm from './ContactForm';
 import { ScrollReveal, StaggerReveal, StaggerItem } from './animations/ScrollReveal';
 
 const contactInfo = [
@@ -37,22 +33,6 @@ const socialLinks = [
 ];
 
 export const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: 'Message sent!',
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <section id="contact" className="section-padding relative overflow-hidden bg-card/30">
       <div className="hero-glow bottom-0 left-1/2 -translate-x-1/2" />
@@ -134,83 +114,7 @@ export const ContactSection = () => {
 
           {/* Contact Form */}
           <ScrollReveal direction="right" delay={0.2}>
-            <motion.form 
-              onSubmit={handleSubmit} 
-              className="space-y-4 md:space-y-6 p-4 md:p-6 rounded-2xl bg-card border border-border/50"
-              whileHover={{ borderColor: 'hsl(var(--primary) / 0.3)' }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-              >
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Your Name
-                </label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="John Doe"
-                  required
-                  className="bg-secondary/50 border-border/50 focus:border-primary transition-colors"
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-              >
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Your Email
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="john@example.com"
-                  required
-                  className="bg-secondary/50 border-border/50 focus:border-primary transition-colors"
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Your Message
-                </label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Tell me about your project..."
-                  rows={5}
-                  required
-                  className="bg-secondary/50 border-border/50 focus:border-primary resize-none transition-colors"
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-              >
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  <Send className="w-4 h-4 mr-2" />
-                  Send Message
-                </Button>
-              </motion.div>
-            </motion.form>
+            <ContactForm />
           </ScrollReveal>
         </div>
       </div>
